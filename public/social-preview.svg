@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="g" cx="75%" cy="30%" r="65%">
+      <stop offset="0" stop-color="#4fdcf3" stop-opacity=".28"/>
+      <stop offset=".55" stop-color="#15232d" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#0d111b"/>
+    </radialGradient>
+    <linearGradient id="line" x1="0" x2="1">
+      <stop stop-color="#4fdcf3" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#4fdcf3"/>
+      <stop offset="1" stop-color="#4fdcf3" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#0d111b"/>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <g fill="none" stroke="#4fdcf3" opacity=".12">
+    <circle cx="925" cy="230" r="190"/>
+    <circle cx="925" cy="230" r="130"/>
+    <path d="M680 485h490M720 450h410M760 415h330"/>
+  </g>
+  <rect x="80" y="78" width="48" height="48" rx="24" fill="none" stroke="#4fdcf3" opacity=".7"/>
+  <text x="104" y="108" fill="#eef5f7" font-family="Georgia,serif" font-size="17" text-anchor="middle" font-style="italic">RG</text>
+  <text x="80" y="228" fill="#4fdcf3" font-family="monospace" font-size="18" letter-spacing="4">RAFAEL GONÇALVES</text>
+  <text x="80" y="310" fill="#eef5f7" font-family="Arial,sans-serif" font-size="62" font-weight="600">Software Engineer</text>
+  <text x="80" y="382" fill="#b9c3ca" font-family="Georgia,serif" font-size="43" font-style="italic">backend · automation · applied AI</text>
+  <rect x="80" y="468" width="620" height="2" fill="url(#line)"/>
+  <text x="80" y="520" fill="#8e9aa4" font-family="monospace" font-size="15" letter-spacing="2">SELECTED SYSTEMS / 2026</text>
+</svg>

@@ -1,0 +1,17 @@
+{
+  "name": "Rafael Gonçalves — Software Engineering Portfolio",
+  "short_name": "Rafael G.",
+  "description": "Backend systems, automation, connected systems, and applied AI.",
+  "start_url": "/Portifolio/",
+  "display": "standalone",
+  "background_color": "#0d111b",
+  "theme_color": "#0d111b",
+  "icons": [
+    {
+      "src": "/Portifolio/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
