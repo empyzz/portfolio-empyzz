@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://empyzz.github.io/Portifolio/sitemap.xml
+Sitemap: https://portfolio-empyzz.vercel.app/sitemap.xml
