@@ -392,7 +392,7 @@ ASIC ENGINEERING
 - ⬜ Sign-Off
 SEMICONDUCTOR ENGINEERING
 ⭐ Destino final
-Aqui eu dividiria em duas possibilidades.
+Destino final de carreira
 Digital / Chip Design
 - ⬜ Digital IC Design
 - ⬜ RTL
@@ -415,7 +415,6 @@ Semiconductor Fundamentals
 - ⬜ Packaging
 - ⬜ Power / Thermal Design
 Matemática
-Eu colocaria como uma trilha transversal, em vez de uma etapa isolada.
 🟧 Mathematics
 - 🟧 Binary / Hexadecimal
 - 🟧 Boolean Algebra
@@ -427,8 +426,7 @@ Eu colocaria como uma trilha transversal, em vez de uma etapa isolada.
 - ⬜ Probability
 - ⬜ Signals & Systems
 - ⬜ Digital Signal Processing
-Roadmap resumido para colocar no topo do portfólio
-Eu colocaria literalmente assim:
+
 SOFTWARE ENGINEERING
 Python • TypeScript • React • Node.js • C# • Linux • Git • Docker
                          │

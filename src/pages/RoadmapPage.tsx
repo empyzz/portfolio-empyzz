@@ -148,7 +148,7 @@ export default function RoadmapPage() {
     <div className="roadmap-page">
       <a className="skip-link" href="#roadmap-workspace">Skip to roadmap</a>
       <header className="roadmap-intro">
-        <div className="roadmap-topline"><a href="/">← portfolio</a><span>RG / learning archive / 002</span><a href={roadmapDownload} download="Roadmap.md">source .md ↓</a></div>
+        <div className="roadmap-topline"><a href="/">← portfolio</a><span>learning archive / 002</span><a href={roadmapDownload} download="Roadmap.md">source .md ↓</a></div>
         <div className="roadmap-title"><Sigil /><div><p className="stage-track">From software to silicon</p><h1>Embedded & Semiconductor<br /><em>Engineering Roadmap.</em></h1></div></div>
         <p className="roadmap-lead">Where I am, what comes next, and the hardware I want to understand. A living study map—not a claim that I already know everything here.</p>
       </header>
@@ -198,11 +198,11 @@ export default function RoadmapPage() {
               </div>
               <MapOverview layout={layout} view={view} onJump={jump} />
               </div>
-              <div className="map-footnote"><span>HTML text + vector connectors / no rasterized roadmap</span><span>Not sure where you are? Use “Fit width / start”.</span></div>
+              <div className="map-footnote"><span>Not sure where you are? Use “Fit width / start”.</span></div>
             </>}
           </div>
         </div>
-        <details className="roadmap-summary" lang="pt-BR"><summary>Resumo original & trilha paralela de hardware</summary><pre>{summary}</pre></details>
+        <details className="roadmap-summary" lang="pt-BR"><summary>Original Resume</summary><pre>{summary}</pre></details>
       </main>
       <dialog ref={inspector} className="roadmap-inspector" aria-label="Stage details" onClose={() => { setSelected(null); setDetailTarget(null) }} onClick={event => { if (event.target === event.currentTarget) setSelected(null) }}>
         <div className="inspector-content">
@@ -210,7 +210,7 @@ export default function RoadmapPage() {
           {selected && <StagePanel stage={stages.find(stage => stage.id === selected)!} query={normalizedQuery} index={selected === 'stage-17' ? undefined : stages.findIndex(stage => stage.id === selected)} prefix="detail-" />}
         </div>
       </dialog>
-      <footer className="roadmap-footer"><span>© {new Date().getFullYear()} Rafael Gonçalves</span><span>Learning in public. One layer deeper.</span><a href="/">back to portfolio ↗</a></footer>
+      <footer className="roadmap-footer"><span>© {new Date().getFullYear()} Rafael Gonçalves</span><span>triple6</span><a href="/">back to portfolio ↗</a></footer>
     </div>
   )
 }

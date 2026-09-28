@@ -1,9 +1,9 @@
 export const statusLabels = {
-  '🟩': 'Conhecimento atual / sólido',
-  '🟨': 'Conhecimento inicial / em desenvolvimento',
-  '🟧': 'Próximas etapas',
-  '⬜': 'Especialização futura',
-  '⭐': 'Objetivo de carreira',
+  '🟩': 'Current/Solid Knowledge',
+  '🟨': 'Initial/Developing Knowledge',
+  '🟧': 'Next Steps',
+  '⬜': 'Future Specialization',
+  '⭐': 'Career Goal',
 } as const
 
 export type Status = keyof typeof statusLabels
