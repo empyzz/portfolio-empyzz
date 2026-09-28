@@ -34,6 +34,7 @@ export default function App() {
           <nav aria-label="Main navigation">
             <a href="#about">about</a>
             <a href="#projects">projects</a>
+            <a href="/roadmap">roadmap</a>
             <a href={profile.github} target="_blank" rel="noopener noreferrer">github ↗</a>
             <a href={profile.linkedin} target="_blank" rel="noopener noreferrer">linkedin ↗</a>
           </nav>
