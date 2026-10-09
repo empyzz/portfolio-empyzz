@@ -57,3 +57,20 @@ test('mathematics and engineering practices are side tracks with supporting link
   assert.equal(graphPlacement[7][0], 4)
   assert(graphEdges.filter(([from]) => from === 16 || from === 7).every(([, , support]) => support === 1))
 })
+
+
+test('the summary stays outside Mathematics with or without its heading', () => {
+  const plain = source.split(/\r?\n/).filter(line => line !== 'Roadmap resumido para colocar no topo do portfólio' && line !== 'Eu colocaria literalmente assim:').join('\n')
+  const headed = plain.replace('\nSOFTWARE ENGINEERING\n', '\nRoadmap resumido para colocar no topo do portfólio\nEu colocaria literalmente assim:\nSOFTWARE ENGINEERING\n')
+  for (const fixture of [plain, headed]) {
+    const parsed = parseRoadmap(fixture)
+    const future = parsed.stages.at(-1).groups.find(group => group.title === 'Future')
+    assert.deepEqual(future.notes, [])
+    assert.equal(future.topics.length, 4)
+    assert(parsed.summary.startsWith('SOFTWARE ENGINEERING\n'))
+    assert(parsed.summary.includes('Paralelamente:'))
+  }
+  const noSummary = parseRoadmap(plain.slice(0, plain.indexOf('\nSOFTWARE ENGINEERING\n')))
+  assert.equal(noSummary.summary, '')
+  assert.deepEqual(noSummary.stages.at(-1).groups.at(-1).notes, [])
+})

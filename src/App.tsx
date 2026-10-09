@@ -73,12 +73,12 @@ export default function App() {
                   <article>
                     <div className="project-title">
                       <span className="project-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
-                      <h3>{project.source ? <a href={project.source}>{project.name}</a> : project.name}</h3>
+                      <h3>{project.source ? <a href={project.source} target="_blank" rel="noopener noreferrer">{project.name}</a> : project.name}</h3>
                     </div>
                     <p>{project.description}</p>
                     <p className="project-stack">{project.stack}</p>
                     {project.status && <p className="project-status">{project.status}</p>}
-                    {project.source && <a className="source-link" href={project.source}>source code ↗</a>}
+                    {project.source && <a className="source-link" href={project.source} target="_blank" rel="noopener noreferrer">source code ↗</a>}
                   </article>
                 </li>
               ))}
@@ -90,7 +90,7 @@ export default function App() {
             <figcaption className="art-baseline">for real</figcaption>
           </figure>
           <div className="section-inner">
-            <a className="more-link" href={profile.github}>more things on github →</a>
+            <a className="more-link" href={profile.github} target="_blank" rel="noopener noreferrer">more things on github →</a>
           </div>
         </section>
       </main>

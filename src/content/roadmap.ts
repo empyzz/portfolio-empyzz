@@ -44,11 +44,13 @@ const topicPattern = /^- (🟩|🟨|🟧|⬜|⭐) (.+)$/u
 
 export function parseRoadmap(source: string) {
   const lines = source.replace(/\r/g, '').split('\n')
-  const summaryIndex = lines.indexOf('Roadmap resumido para colocar no topo do portfólio')
+  const summaryHeadingIndex = lines.indexOf('Roadmap resumido para colocar no topo do portfólio')
   const starts = sections.map(([heading]) => lines.indexOf(heading))
   if (starts.some((start, index) => start < 0 || (index > 0 && start <= starts[index - 1]))) {
     throw new Error('Roadmap.md: expected section headings are missing or out of order.')
   }
+  const summaryStart = lines.findIndex((line, index) => index > starts[starts.length - 1] && line.trim() === 'SOFTWARE ENGINEERING')
+  const summaryIndex = summaryHeadingIndex >= 0 ? summaryHeadingIndex : summaryStart
   const stages: Stage[] = sections.map(([, title, track], index) => {
     const stage: Stage = { id: `stage-${index + 1}`, title, track, goal: index === 14 || index === 15, notes: [], groups: [] }
     const body = lines.slice(starts[index] + 1, starts[index + 1] ?? (summaryIndex < 0 ? lines.length : summaryIndex))
@@ -69,5 +71,5 @@ export function parseRoadmap(source: string) {
     }
     return stage
   })
-  return { stages, summary: summaryIndex < 0 ? '' : lines.slice(summaryIndex + 2).join('\n').trim() }
+  return { stages, summary: summaryIndex < 0 ? '' : lines.slice(summaryStart >= 0 ? summaryStart : summaryIndex + 1).join('\n').trim() }
 }
